@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="moment.css">
+    <script src="../long/js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #wrap {
+            width: 100%;
+            height: 100%;
+            background-image: url("../../../../Pinker/img/bgImg.png");
+            background-repeat: repeat-y;
+            position: relative;
+        }
+
+        #head {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color:white;
+            opacity: 0.9;
+            overflow: hidden;
+            z-index: 66;
+
+        }
+
+        #logo {
+            width: 37px;
+            height: 80px;
+            float: left;
+            margin-left: 200px;
+            margin-top: 28px;
+        }
+        .navs{
+            float: left;
+            border: 1px;
+            width: 85px;
+            height: 100px;
+            display: block;
+            text-align: center;
+            line-height: 100px;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            font-size: 16px;
+
+
+        }
+       #fa
+        {
+            margin-left: 100px;
+        }
+
+       #head a:hover{
+           background-color: ghostwhite;
+
+        }
+
+        #bibi {
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-top:25px;
+            margin-left: 480px;
+        }
+        #bibi img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #user {
+            float: left;
+            width: 110px;
+            height: 40px;
+            border-radius: 20px;
+            border: 1px solid #5CAE6D;
+            text-align: center;
+            line-height: 40px;
+            display: inline-block;
+            margin-top: 25px;
+            margin-left: 45px;
+            font-size: 14px;
+            color: #5CAE6D;
+
+        }
+        #user a {
+            color: #5CAE6D;
+            background-color:white ;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+
+
+        .footdiv{
+            float: left;
+            width: 83px;
+            border: 1px solid black;
+            margin-top: 98px;
+        }
+        #fa1
+        {
+            margin-left: -425px;
+        }
+        #fa2
+        {
+            margin-left: -340px;
+            display: none;
+        }
+        #fa3
+        {
+            margin-left: -255px;
+            display: none;
+        }
+
+        #fa4
+        {
+            margin-left: -170px;
+            display: none;
+        }
+        #fa5
+        {
+            margin-left: -85px;
+            display: none;
+        }
+
+        #title {
+            width: 960px;
+            height: 480px;
+            margin: 0 auto;
+            /*border: 1px solid black;*/
+            margin-top: 140px;
+            overflow: hidden;
+        }
+        #title div{
+            float: left;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #title div:nth-child(1)
+        {
+            width: 480px;
+            height: 480px;
+        }
+        #title div:nth-child(2)
+        {
+            width: 240px;
+            height: 240px;
+        }
+        #title div:nth-child(3)
+        {
+            width: 240px;
+            height: 240px;
+        }
+        #title div:nth-child(4)
+        {
+            width: 240px;
+            height: 240px;
+        }
+        #title div:nth-child(5)
+        {
+            width: 240px;
+            height: 240px;
+        }
+        #title img:hover
+        {
+            transform: scale(1.2);
+            transition: all .5s;
+        }
+
+
+
+        #imgh1 {
+            width: 460px;
+            height:100px;
+            position: absolute;
+            left: 0;
+            top:-100px;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 3;
+            color: white;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 18px;
+            padding-top: 5px;
+            display: none;
+        }
+        #imgh2 {
+            width: 230px;
+            height:50px;
+            position: absolute;
+            left: 480px;;
+            top:-290px;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 3;
+            color: white;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 14px;
+            padding-top: 5px;
+            display: none;
+
+        }
+        #imgh3 {
+            width: 230px;
+            height:50px;
+            position: absolute;
+            left:720px;;
+            top:-290px;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 3;
+            color: white;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 14px;
+            padding-top: 5px;
+            display: none;
+
+        }
+        #imgh4 {
+            width: 230px;
+            height:50px;
+            position: absolute;
+            left:480px;;
+            top:-50px;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 3;
+            color: white;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 14px;
+            padding-top: 5px;
+            display: none;
+
+        }
+        #imgh5 {
+            width: 230px;
+            height:50px;
+            position: absolute;
+            left:720px;;
+            top:-50px;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 3;
+            color: white;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 14px;
+            padding-top: 5px;
+            display: none;
+
+        }
+
+        #cut1 {
+            width: 960px;
+            height: 60px;
+            margin: 0 auto;
+            /*border: 1px solid black;*/
+            margin-top: 60px;
+            /*background-color: gainsboro;*/
+            /*vertical-align: middle;*/
+            padding: 10px;
+
+        }
+        #cut1 img{
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #divText {
+            width: 964px;
+            height: 688px;
+            /*border: 1px solid black;*/
+            margin: 0 auto;
+        }
+        .texts{
+            width: 960px;
+            height: 220px;
+            overflow: hidden;
+            border: 1px solid #E8E8E8;
+            margin-top: 10px;
+
+        }
+        .textimg{
+            float: right;
+            /*border: 1px solid black;*/
+            width: 300px;
+            height: 220px;
+
+        }
+       .neirong a:nth-child(1){
+             display: inline-block;
+             font-size: 24px;
+             font-weight: 200;
+             margin-left: 15px;
+             margin-top: 10px;
+             text-decoration: none;
+             color: black;
+
+         }
+
+        .neirong{
+            float: left;
+            width: 650px;
+            height: 220px;
+        }
+        #a2{
+            font-size: 12px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+        #a3{
+            font-size: 12px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+        #a4{
+            font-size: 12px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+
+        .neirong a:hover{
+            color: #5CAE6D;
+        }
+        #a2 :hover{
+            color: #5CAE6D;
+        }
+        .neirong p {
+            margin-left: 20px;
+        }
+        .p1{
+            font-size: 14px;
+            color: #BDC1BD;
+        }
+        #divText .neirong  .da{
+            font-size: 12px;
+            color: #5CAE6D;
+            font-weight: 100;
+        }
+        .p2{
+           font-size: 12px;
+            color: #BDC1BD;
+            font-weight: 100;
+        }
+        #cut2 {
+            width: 960px;
+            height: 60px;
+            margin: 0 auto;
+            /*border: 1px solid black;*/
+            margin-top: 60px;
+            /*background-color: gainsboro;*/
+            /*vertical-align: middle;*/
+            padding: 10px;
+
+        }
+        #cut2 img{
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #lisn {
+            width: 964px;
+            height: 422px;
+            /*border: 1px solid #BDC1BD;*/
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .song{
+            float: left;
+            border: 1px solid #BDC1BD;
+
+        }
+        .songImg{
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        #lisn .song:nth-child(2){
+            margin-left: 29px;
+        }
+        #lisn .song:nth-child(3){
+            margin-left:29px;
+        }
+        .songT{
+            width: 300px;
+            height: 120px;
+        }
+        .songT a{
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 200;
+            margin-left: 15px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        #i2{
+            font-size: 12px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+        #i3{
+            font-size: 12px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+        #i4{
+            font-size: 12px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+        .songT a:hover{
+            color:#5CAE6D ;
+        }
+        #cut3 {
+            width: 960px;
+            height: 60px;
+            margin: 0 auto;
+            /*border: 1px solid black;*/
+            margin-top: 60px;
+            /*background-color: gainsboro;*/
+            /*vertical-align: middle;*/
+            padding: 10px;
+
+        }
+        #cut3 img{
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+       #lisn .song .songImg img:hover
+        {
+            transform: scale(1.2);
+            transition: all .5s;
+        }
+
+        .mengban {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            opacity: 0.5;
+            position: absolute;
+            left: 0;
+            top:0;
+            z-index: 3;
+            display: none;
+
+        }
+        .mengban img{
+            position: absolute;
+            left: 125px;
+            top: 125px;
+            width: 50px;
+            height: 50px;
+            /*z-index: 6;*/
+            display: none;
+        }
+        .mengban1 {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            opacity: 0.5;
+            position: absolute;
+            left: 0;
+            top:0;
+            /*z-index: 3;*/
+            display: none;
+
+        }
+        .mengban1 img{
+            position: absolute;
+            left: 125px;
+            top: 125px;
+            width: 50px;
+            height: 50px;
+            /*z-index: 6;*/
+            display: none;
+        }
+        .mengban2 {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            opacity: 0.5;
+            position: absolute;
+            left: 0;
+            top:0;
+            z-index: 3;
+            display: none;
+
+        }
+        .mengban2 img{
+            position: absolute;
+            left: 125px;
+            top: 125px;
+            width: 50px;
+            height: 50px;
+            /*z-index: 6;*/
+            display: none;
+        }
+
+        #pinker {
+            width: 960px;
+            height: 240px;
+            overflow: hidden;
+            margin: 0 auto;
+            /*border: 1px solid black;*/
+            position: relative;
+
+        }
+        #pinker div{
+            width: 230px;
+            height: 230px;
+            float: left;
+            border: 1px solid #BDC1BD;
+            background-image:url("../../../../Pinker/imgs/user-bg.png") ;
+            background-size: 100% 100%;
+        }
+        #pinker div:nth-child(2)
+        {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #pinker div:nth-child(3)
+        {
+            margin-right: 10px;
+        }
+
+
+        #pinker  .touxiang{
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            border: 1px solid #BDC1BD;
+            overflow: hidden;
+            margin-left: 25px;
+            margin-top: 50px;
+
+        }
+        .Tneirong{
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+
+        }
+        #pinker .Tt  a{
+            text-decoration:none;
+            color: black;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+
+        }
+
+        #pinker .Tt .px{
+            color: gray;
+            font-size: 12px;
+
+        }
+
+        #pinker .Tt {
+            background: none;
+            width: 80px;
+            height: 80px;
+            margin-top: 70px;
+            margin-left: 10px;
+            border: none;
+        }
+        #pinker .musicMan{
+            background: none;
+            width: 60px;
+            height: 20px;
+            border: none;
+            margin-left: 37px;
+            margin-top: -8px;
+        }
+        #pinker .Tt a:hover{
+            color: #5CAE6D;
+        }
+
+
+        #more {
+            width:190px;
+            height: 54px;
+            border-radius: 35px;
+            border: 1px solid #5CAE6D;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+
+        #moreIn {
+            width: 180px;
+            height: 44px;
+            margin: 5px 5px;
+            background-color:#78BC85 ;
+            border-radius: 35px;
+        }
+        #more a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            line-height: 44px;
+        }
+
+        #footD {
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            opacity: 0.9;
+            margin-top: 80px;
+            position: relative;
+        }
+        #footD img{
+            margin-top: 30px;
+            margin-left: 200px;
+        }
+        #footD a{
+
+            display:inline-block;
+            text-decoration: none;
+            color: gray;
+            font-size: 12px;
+
+
+        }
+        #aArr{
+              position: absolute;
+              left: 317px;
+              top:33px;
+          }
+        #zia{
+            position: absolute;
+            left: 317px;
+            top:60px;
+            font-size: 12px;
+            color: gray;
+        }
+
+        #tupiana {
+            width: 400px;
+            height: 80px;
+            /*border: 1px solid red;*/
+            position: absolute;
+            overflow: hidden;
+            left:1020px;
+            top:10px;
+        }
+
+
+    #tupiana  img{
+          margin: 0;
+          padding: 0;
+          float: left;
+          width: 38px;
+          height: 38px;
+          margin-left: 20px;
+        margin-top:20px;
+        }
+        #tupiana  img:nth-child(4)
+        {
+            width: 128px;
+            height: 38px;
+            margin-left: 20px;
+
+        }
+
+        #downTop {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: -200px;
+            left: 1300px;
+            /*display: none;*/
+        }
+        #downTop img{
+            opacity: 0.2;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="head">
+
+        <div id="logo">
+            <img src="../../../../Pinker/imgs/head-logo.png" height="37" width="80"/>
+    </div>
+    <div>
+        <a href="#" class="navs" id="fa">首页</a>
+        <a href="#" class="navs">阅读</a>
+        <a href="#" class="navs">电台</a>
+        <a href="#" class="navs">碎片</a>
+        <a href="#" class="navs">客户端</a>
+        <div class="footdiv" id="fa1"></div>
+        <div class="footdiv" id="fa2"></div>
+        <div class="footdiv" id="fa3"></div>
+        <div class="footdiv" id="fa4"></div>
+        <div class="footdiv" id="fa5"></div>
+    </div>
+
+        <div id="bibi">
+            <img src="../../../../Pinker/imgs/bibi.jpg" height="78" width="78"/>
+        </div>
+        <div id="user">
+            <a href="#">登录</a>/<a href="#">注册</a>
+        </div>
+
+
+    </div>
+    <div id="title">
+        <div >
+            <img src="../../../../Pinker/imgs/10ec7bfffb06c90f7d36421df5afaebf20170321.jpg" height="480" width="480"/>
+
+        </div>
+        <div><img src="../../../../Pinker/imgs/4b9cabfe7bdaef3757ce818f1617776020170509.jpg" height="240" width="240"/></div>
+        <div><img src="../../../../Pinker/imgs/b7ba659ac441c3996e12be395ba61bcb20170501.jpg" height="240" width="240"/></div>
+        <div><img src="../../../../Pinker/imgs/d261c1e53975eca13bb0f6ac83f62a4a20170225.jpg" height="240" width="240"/></div>
+        <div><img src="../../../../Pinker/imgs/fdb9e3529e71d35abc1b574005b1e35a20170508.jpg" height="240" width="240"/></div>
+        <div id="imgh1">
+            ____
+
+            <br>
+            这样锻炼,你才会掌握说话...
+            <h6 style="color: white">lalla </h6>
+        </div>
+        <div id="imgh2">
+            ____
+
+            <br>
+            有社交恐惧症的你该怎么办
+            <h6 style="color: white">lalla </h6>
+        </div>
+        <div id="imgh3">
+            ____
+
+            <br>
+            怎样找到自己想做的事
+            <h6 style="color: white">lalla </h6>
+        </div>
+        <div id="imgh4">
+            ____
+
+            <br>
+            我觉着不行
+            <h6 style="color: white">lalla </h6>
+        </div>
+        <div id="imgh5">
+            ____
+            <br>
+
+            我觉着还OK啊
+            <h6 style="color: white">lalla </h6>
+        </div>
+    </div>
+    <div id="cut1">
+        <img src="../../../../Pinker/imgs/方块.png" height="20" width="20"/>
+        阅读 丨 Read
+    </div>
+    <div id="divText">
+        <div class="texts">
+           <div class="neirong">
+               <a href="#">飞鸿踏雪泥</a>
+               <br>
+               <a href="#" id="a2">By / 失足少年七千</a>
+               <p>___</p>
+               <br>
+               <p class="p1"> 1.     “一个人挥刀的速度，不在于他有多恨那个人。”     “有的人在挥刀之前，会犹豫不决。”     “有的人发觉自己有些动摇时，反而更快地作出决定 <a  class="da" href="#">VIEW ALL     <img
+                       src="../../../../Pinker/imgs/viewall.png" height="12" width="6"/></a>
+               </p>
+               <br>
+               <br>
+               <p class="p2">
+                   2.3k阅读 丨 评论8 丨 喜欢:108
+               </p>
+           </div>
+
+            <div class="textimg">
+
+                <img src="../../../../Pinker/imgs/44F7334D-4A4A-4C22-B6E2-330105497642.png" height="218" width="300"/>
+            </div>
+        </div>
+        <div class="texts">
+            <div class="neirong">
+                <a href="#">无痛人流</a>
+                <br>
+                <a href="#" id="a3">By / 读行者-流冬</a>
+                <p>___</p>
+                <br>
+                <p class="p1"> 此为“日记小说”系列。 A 小时候我们是好兄弟，长大后关系就疏远了。他加入了城里的黑社会，后来也不怎么回家，很少与我说话，没有再叫<a  class="da" href="#">VIEW ALL     <img
+                        src="../../../../Pinker/imgs/viewall.png" height="12" width="6"/></a>
+                </p>
+                <br>
+                <br>
+                <p class="p2">
+                    1.5k阅读 丨 评论10 丨 喜欢:141
+                </p>
+            </div>
+            <div class="textimg">
+                <img src="../../../../Pinker/imgs/A0C51EBF-37AB-48D2-8086-08C0E26C1D8D.png" height="218" width="299"/>
+            </div>
+        </div>
+        <div class="texts">
+
+            <div class="neirong">
+                <a href="#">戏剧+性≈戏剧性</a>
+                <br>
+                <a href="#" id="a4">By / 阿凡达</a>
+                <p>___</p>
+                <br>
+                <p class="p1"> 此为“日记小说”系列。 A 小时候我们是好兄弟，长大后关系就疏远了。他加入了城里的黑社会，后来也不怎么回家，很少与我说话，没有再叫<a  class="da" href="#">VIEW ALL     <img
+                        src="../../../../Pinker/imgs/viewall.png" height="12" width="6"/></a>
+                </p>
+                <br>
+                <br>
+                <p class="p2">
+                    1.3k阅读 丨 评论15 丨 喜欢:77
+                </p>
+            </div>
+
+            <div class="textimg">
+
+                <img src="../../../../Pinker/imgs/DFAD579A-5B04-40D1-8541-0BFF3B02FD5A.png" height="215" width="300"/></div>
+        </div>
+
+    </div>
+    <div id="cut2">
+        <img src="../../../../Pinker/imgs/方块.png" height="20" width="20"/>
+        TING
+    </div>
+    <div id="lisn">
+        <div class="song">
+            <div class="songImg">
+                <img id="ch1" src="../../../../Pinker/imgs/57f193998c938ee4af38188f36a82c63.PNG@640w_85Q.jpg" height="300" width="300"/>
+                <div class="mengban">
+                    <img src="../../../../Pinker/imgs/播放%20(1).png" height="50" width="50"/>
+                </div>
+
+            </div>
+            <div class="songT">
+                <a href="#">和你在一起</a>
+                <br>
+                <a href="#" id="i2">主播 / TingK</a>
+                <br>
+                <br>
+                <p class="p2" style="padding-left: 10px">
+                    2.3k播放 丨 评论8 丨 喜欢:108
+                </p>
+            </div>
+
+        </div>
+        <div class="song" id="hulala">
+            <div class="songImg">
+                <img id="ch2" src="../../../../Pinker/imgs/73ca34ab4e489ad208cd12607d5ca4b4.PNG@640w_85Q.jpg" height="300" width="300"/>
+                <div class="mengban1">
+                    <img src="../../../../Pinker/imgs/播放%20(1).png" height="50" width="50"/>
+                </div>
+            </div>
+
+            <div class="songT">
+                <a href="#">是我太认真</a>
+                <br>
+                <a href="#" id="i3">主播 / 贾先达</a>
+                <br>
+                <br>
+                <p class="p2" style="padding-left: 10px">
+                    3.3k播放 丨 评论77 丨 喜欢:64
+                </p>
+            </div>
+
+
+        </div>
+        <div class="song" id="hula">
+            <div class="songImg" >
+                <img id="ch3" src="../../../../Pinker/img/b8a32b3ea57071e991cba55aa25ce834.PNG@640w_85Q.jpg" height="300" width="300"/>
+                <div class="mengban2">
+                    <img src="../../../../Pinker/imgs/播放%20(1).png" height="50" width="50"/>
+                </div>
+            </div>
+
+            <div class="songT">
+                <a href="#">把悲伤留给自己</a>
+                <br>
+                <a href="#" id="i4">主播 / Jony J</a>
+                <br>
+                <br>
+                <p class="p2" style="padding-left: 10px">
+                    5.5k播放 丨 评论41 丨 喜欢:188
+                </p>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="cut3">
+        <img src="../../../../Pinker/imgs/方块.png" height="20" width="20"/>
+        人气片客 丨Hot Pianker
+    </div>
+    <div id="pinker">
+        <div>
+            <div class="touxiang">
+                <img src="../../../../Pinker/imgs/4cca2c8e44c978c11697d580db691bb220170209.jpeg" height="80" width="80"/>
+            </div>
+            <div class="Tt">
+                <a href="#">王睿 Ray</a>
+
+                <p class="px">___</p>
+
+                <p class="px">流行歌手王睿</p>
+            </div>
+            <div class="musicMan">
+                <img src="../../../../Pinker/img/user_musician.png" height="20" width="60"/>
+            </div>
+        </div>
+        <div>
+
+        <div class="touxiang">
+            <img src="../../../../Pinker/img/a8688a423d9d55a9db48d0d5298a594d20170601.png" height="80" width="80"/>
+        </div>
+            <div class="Tt">
+                <a href="#">阿见</a>
+
+                <p class="px">___</p>
+
+                <p class="px">独立音乐人,<br>电台主持人</p>
+            </div>
+            <div class="musicMan">
+                <img src="../../../../Pinker/img/user_musician.png" height="20" width="60"/>
+            </div>
+
+        </div>
+
+
+
+        <div><div class="touxiang">
+            <img src="../../../../Pinker/imgs/8b29dc859b74cb196f7b071ab94470d820170126.jpg" height="80" width="80"/>
+        </div>
+            <div class="Tt">
+                <a href="#">贤菌</a>
+
+                <p class="px">___</p>
+
+                <p class="px">唱片翻刻达人</p>
+            </div>
+            <div class="musicMan">
+                <img src="../../../../Pinker/img/user_musician.png" height="20" width="60"/>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="touxiang">
+                <img src="../../../../Pinker/imgs/9a7018ced880d6f925b02b91934c9f1520170726.jpeg" height="80" width="80"/>
+        </div>
+
+            <div class="Tt">
+                <a href="#">陆深兽</a>
+
+                <p class="px">___</p>
+
+                <p class="px">靠脸吃饭,臭不要脸</p>
+            </div>
+            <div class="musicMan">
+                <img src="../../../../Pinker/img/user_musician.png" height="20" width="60"/>
+            </div></div>
+    </div>
+    <div id="more">
+        <a href="#"><div id="moreIn">查看更多精彩内容</div></a>
+    </div>
+    <div id="footD">
+        <img src="../../../../Pinker/imgs/foot-logo.png" height="50" width="100"/>
+        <div id="aArr">
+            <a href="#">关于我们</a>
+            <a href="#">友情链接</a>
+            <a href="#">片刻帮助</a>
+            <a href="#">意见反馈</a>
+            <a href="#">成长自己</a>
+        </div>
+        <div id="zia">
+            All rights reserved © 2016 pianke.me /蜀ICP备12022689号-1
+        </div>
+        <div id="tupiana">
+            <img src="../../../../Pinker/imgs/foot-app.png" height="38" width="38"/>
+            <img src="../../../../Pinker/imgs/foot-sina.png" height="38" width="38"/>
+            <img src="../../../../Pinker/imgs/foot-wechat.png" height="38" width="38"/>
+            <img src="../../../../Pinker/imgs/foot-safe.png" height="46" width="158"/>
+        </div>
+        <div id="downTop">
+         <a href="#"><img src="../../../../Pinker/imgs/back-top.png" height="50" width="50"/></a>   </div>
+    </div>
+
+
+
+</div>
+
+</body>
+<script>
+    $("#user").hover(function () {
+        $("#user a").css("color","white");
+        $("#user").css("backgroundColor","#5CAE6D");
+        $("#user").css("color","white");
+        $("#user a").css("backgroundColor","#5CAE6D");
+        $("#user a").css("transition","1s");
+        $("#user").css("transition","1s");
+    },function () {
+        $("#user").css("backgroundColor","white");
+        $("#user a").css("color","#5CAE6D");
+        $("#user").css("color","#5CAE6D");
+        $("#user a").css("backgroundColor","white");
+        $("#user a").css("transition","1s");
+        $("#user").css("transition","1s");
+    });
+    $("#title div:eq(0)").hover(function () {
+        $("#imgh1").show();
+    },function () {
+        $("#imgh1").hide();
+    });
+    $("#title div:eq(1)").hover(function () {
+        $("#imgh2").show();
+    },function () {
+        $("#imgh2").hide();
+    });
+    $("#title div:eq(2)").hover(function () {
+        $("#imgh3").show();
+    },function () {
+        $("#imgh3").hide();
+    });
+    $("#title div:eq(3)").hover(function () {
+        $("#imgh4").show();
+    },function () {
+        $("#imgh4").hide();
+    });
+    $("#title div:eq(4)").hover(function () {
+        $("#imgh5").show();
+    },function () {
+        $("#imgh5").hide();
+    });
+    $(" .song .songImg:eq(0)").hover(function () {
+        $(".mengban ").show();
+        $(".mengban img").show();
+        $("#ch1").css("transform","scale(1.2)").transition("delay","500");
+    },function () {
+        $(".mengban").hide();
+        $(".mengban img").hide();
+        $("#ch1").css("transform","scale(1)").delay(5000);
+    });
+    $(" .song .songImg:eq(1)").hover(function () {
+        $(".mengban1 ").show();
+        $(".mengban1 img").show();
+        $("#ch2").css("transform","scale(1.2)").transition("all",".5s")
+    },function () {
+        $(".mengban1").hide();
+        $(".mengban1 img").hide();
+        $("#ch2").css("transform","scale(1)").transition("all",".5s")
+    });
+    $(".song .songImg:eq(2)").hover(function () {
+        $(".mengban2 ").show();
+        $(".mengban2 img").show();
+        $("#ch3").css("transform","scale(1.2)").transition("all",".5s")
+    },function () {
+        $(".mengban2").hide();
+        $(".mengban2 img").hide();
+        $("#ch3").css("transform","scale(1)").transition("all",".5s")
+    });
+
+    $("#more a").hover(function () {
+        $("#moreIn").css("backgroundColor","#5CAE6D")
+    },function () {
+        $("#moreIn").css("backgroundColor","#78BC85")
+
+    });
+    $(document).ready(function(){
+        var p=0,t=0;
+
+        $(window).scroll(function(e){
+            p = $(this).scrollTop();
+                if(t<=p && p >100){//下滚
+                    $("#head").slideUp();
+                }
+
+                else{//上滚
+                    $("#head").slideDown();
+                }
+
+            setTimeout(function(){t = p;},0);
+        });
+    });
+
+//   if ( $("#downTop").scrollTop() > 600)
+//   {
+//       $("#downTop").show();
+//   }
+//
+//
+//    $(document).ready(function(){
+//        var w=0;
+//
+//        $(window).scroll(function(e){
+//            w = $("#downTop").scrollTop();
+//            if( w >600){
+//
+//            }
+//
+//            else if ( w < 600)
+//            {
+//                $("#downTop").hide();
+//            }
+//
+//
+//        });
+//    });
+
+
+
+</script>
+</html>
